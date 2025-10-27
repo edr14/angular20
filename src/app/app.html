@@ -1,62 +1,84 @@
 <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4; 
+      background-color: #f4f4f4;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
+      flex-direction: column; 
+      width: 100%; 
     }
-
     .header {
-      background-color: #ffffff; 
-      color: #333;
+      background-color: #ffffff;
       padding: 15px 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      width: 100%; 
     }
 
     .logo {
       font-size: 1.5em;
       font-weight: bold;
-      color: #007bff;
+      color: #333;
       text-decoration: none;
+      display: flex;
+      align-items: center;
     }
+
+    .logo-img {
+      height: 40px; 
+      width: 40px;
+      margin-right: 10px;
+      border-radius: 4px;
+    }
+
     .main-content {
       flex: 1; 
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: center; 
       justify-content: center; 
       padding: 20px;
+      width: 100%; 
     }
 
     .welcome-card {
       background-color: #ffffff;
       padding: 30px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
       text-align: center;
-      max-width: 400px;
-      width: 100%;
-      border-left: 5px solid #007bff; 
+      max-width: 350px; 
+      width: 90%;
+      border-left: 5px solid #007bff;
+      transition: transform 0.3s ease;
+    }
+
+    .welcome-card:hover {
+        transform: translateY(-5px); 
     }
 
     .welcome-card h1 {
-      color: #333;
+      color: #007bff;
       margin-top: 0;
-      font-size: 1.8em;
+      font-size: 2em;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
     }
     
     .welcome-card p {
       color: #666;
-      font-size: 1.1em;
+      font-size: 1.2em;
+      font-style: italic;
       margin-bottom: 0;
     }
-
     .footer {
       background-color: #e9ecef; 
       color: #6c757d;
@@ -64,25 +86,26 @@
       padding: 15px 20px;
       font-size: 0.9em;
       width: 100%;
-      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05); 
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
     }
   </style>
 
-<header class="header">
-        <h1><span style="color:#007bff;">&#9733;</span> Mi App Angular</h1>
-    
+  <header class="header">
+    <a href="/" class="logo">
+        Shop Enoc
+    </a>
   </header>
 
   <div class="main-content">
     
     <div class="welcome-card">
-      <h2>¡Bienvenido/a!</h2>
+      <h1>Bienvenido/a</h1>
       <p>Nombre de la Persona</p>
     </div>
 
-
-      <footer class="footer">
-    &copy; 2025 Mi Proyecto Angular. Todos los derechos reservados.
-  </footer>
+  </div>
+    <footer class="footer">
+      &copy; 2025 Mi Proyecto Angular. Todos los derechos reservados.
+    </footer>
 
 <router-outlet />
