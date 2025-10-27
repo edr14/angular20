@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+.text-uppercase {
+    text-transform: uppercase;
+}   
+.footer{
+    color: #000 !important
+}
